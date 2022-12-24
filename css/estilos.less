@@ -3,6 +3,8 @@
 @primario: #64f4ab;
 @secundario: #2d2e31;
 @tercero: #252629;
+@cuarto: #81838a;
+@quinto: #2b2c2f;
 @fuente-primaria: "DM Sans", sans-serif;
 @fuente-secundaria: "Roboto Mono", monospace;
 
@@ -10,8 +12,345 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Roboto, sans-serif;
+  font-family: @fuente-secundaria;
+}
+html {
+  &::-webkit-scrollbar {
+    width: 3px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: @secundario;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: @primario;
+    border-radius: 5px;
+  }
 }
 body {
-  background-color: @tercero;
+  background-color: @secundario;
+  position: relative;
 }
+header {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  padding: 0;
+  background-color: fade(@secundario, 90);
+  z-index: 100000000;
+  .ancho {
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 75px;
+    .logo {
+      p {
+        color: white;
+        font-family: @fuente-secundaria;
+        font-weight: 200;
+        font-size: 23px;
+        cursor: default;
+        strong {
+          font-weight: 600;
+          padding-right: 5px;
+        }
+      }
+    }
+    nav.menu-ppl {
+      ul {
+        list-style: none;
+        li {
+          a {
+            text-decoration: none;
+            color: white;
+            font-weight: 200;
+            font-size: 13px;
+            padding: 0 20px;
+            transition: all 0.5s;
+            position: relative;
+            &::before {
+              content: "<";
+              display: block;
+              position: absolute;
+              color: @primario;
+              left: 12px;
+              top: 50%;
+              transform: translateY(-50%);
+              opacity: 0;
+              transition: all 0.5s;
+            }
+            &::after {
+              content: ">";
+              display: block;
+              position: absolute;
+              color: @primario;
+              right: 12px;
+              top: 50%;
+              transform: translateY(-50%);
+              opacity: 0;
+              transition: all 0.5s;
+            }
+            &:hover {
+              color: @primario;
+              &::before {
+                opacity: 1;
+                left: 5px;
+                transition: opacity 0.3s;
+                transition: left 0.5s;
+              }
+              &::after {
+                opacity: 1;
+                right: 5px;
+                transition: opacity 0.3s;
+                transition: right 0.5s;
+              }
+            }
+          }
+        }
+      }
+    } //,menu
+    .redes {
+      ul {
+        list-style: none;
+        li {
+          a {
+            text-decoration: none;
+            color: white;
+            font-weight: 200;
+            font-size: 13px;
+            padding: 0 20px;
+            transition: all 0.5s;
+            i {
+              padding-right: 10px;
+              font-weight: 100;
+              transition: all 0.5s;
+            }
+            &:hover {
+              color: @primario;
+              transition: all 0.5s;
+              i {
+                color: @primario;
+                transition: all 0.5s;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+} // header
+section.quienSoy {
+  height: calc(100vh - 75px);
+  //   border: 1px solid turquoise;
+  & > .ancho {
+    max-width: 1250px;
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-end;
+    height: 100%;
+    .contenido {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      .contenedor {
+        max-width: 450px;
+      }
+      .cargo {
+        background-color: @primario;
+        color: @tercero;
+        display: inline-block;
+        padding: 2px 15px;
+        border-radius: 5px;
+        font-size: 13px;
+      }
+      h1 {
+        color: white;
+        font-size: 40px;
+        font-weight: 400;
+        line-height: 45px;
+        margin: 25px 0;
+      }
+      .parrafo {
+        font-size: 13px;
+        color: @cuarto;
+        line-height: 25px;
+        margin-bottom: 50px;
+      }
+      a {
+        color: @primario;
+        text-decoration: none;
+        display: inline-block;
+        position: relative;
+        text-transform: uppercase;
+        font-size: 20px;
+        &::before {
+          content: "";
+          display: block;
+          position: absolute;
+          width: 100%;
+          height: 1px;
+          bottom: -5px;
+          left: 0;
+          background-color: @primario;
+        }
+      }
+    }
+    .graficos {
+      width: 600px;
+      min-width: 600px;
+      position: relative;
+      height: 100%;
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        background-color: @tercero;
+        bottom: 70%;
+        right: 12%;
+        border-radius: 50%;
+        z-index: 10;
+      }
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        background-color: @primario;
+        bottom: 30%;
+        right: 0%;
+        border-radius: 50%;
+        z-index: 10;
+      }
+      .yo {
+        height: 450px;
+        width: auto;
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
+      }
+      .rueda {
+        width: 450px;
+        height: 450px;
+        position: absolute;
+        bottom: 25px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      .icon {
+        position: absolute;
+        background-color: @tercero;
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+        padding: 15px;
+        img {
+          width: 100%;
+        }
+      }
+      .icon-react {
+        padding: 15px;
+        bottom: 100px;
+        left: 15%;
+      }
+      .icon-wordpress {
+        width: 125px;
+        height: 125px;
+        bottom: 30px;
+        right: 5%;
+      }
+      .icon-laravel {
+        width: 75px;
+        height: 75px;
+        bottom: 50%;
+        right: 10%;
+      }
+    }
+  }
+  .infoSobreMi {
+    background-color: @tercero;
+    padding-top: 100px;
+    padding-bottom: 250px;
+    .ancho {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      .experiencia {
+        width: 50%;
+        h2 {
+          font-size: 20px;
+          color: white;
+          font-weight: 400;
+          margin-bottom: 25px;
+        }
+        .caja {
+          width: 80%;
+          background: @quinto;
+          margin: 10px 0;
+          padding: 25px;
+          border-radius: 5px;
+          display: flex;
+          align-items: flex-start;
+          justify-content: space-between;
+          .contenido {
+            width: calc(100% - 50px);
+            h3 {
+              color: white;
+              font-weight: 400;
+              font-size: 20px;
+              line-height: 20px;
+              margin-bottom: 10px;
+            }
+            p {
+              font-size: 13px;
+              color: @cuarto;
+            }
+          }
+          i {
+            color: @primario;
+            font-size: 25px;
+          }
+        }
+      }
+      .sobreMi {
+        width: 50%;
+        position: relative;
+        display: flex;
+        justify-content: flex-end;
+        .content {
+          width: 80%;
+        }
+        h2 {
+          color: white;
+          font-size: 30px;
+          font-weight: 400;
+          margin-bottom: 50px;
+        }
+        strong {
+          color: white;
+          font-size: 18px;
+          font-weight: 400;
+          font-style: italic;
+          margin-bottom: 25px;
+          display: inline-block;
+          max-width: 350px;
+        }
+        p {
+          font-size: 13px;
+          color: @cuarto;
+          max-width: 350px;
+        }
+      }
+    }
+  }
+} //quiensoy
