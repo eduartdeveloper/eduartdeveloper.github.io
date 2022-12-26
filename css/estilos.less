@@ -150,6 +150,7 @@ section.quienSoy {
   //   border: 1px solid turquoise;
   & > .ancho {
     height: calc(100vh - 75px);
+    max-height: 600px;
     max-width: 1250px;
     margin: 0 auto;
     display: flex;
@@ -1012,5 +1013,74 @@ footer {
   }
   .icon-pack2 ul li:hover:nth-child(5) a:after {
     background-color: #20af55;
+  }
+}
+
+@media screen and (max-width: 1070px) {
+  header {
+    padding: 0 5%;
+  }
+  header .ancho .redes ul {
+    display: none;
+  }
+  section.quienSoy > .ancho,
+  section.quienSoy .infoSobreMi .ancho,
+  section.ultimosTrabajos .ancho,
+  section.habilidades .ancho {
+    padding: 0 5%;
+  }
+  section.quienSoy > .ancho .graficos {
+    width: 500px;
+    min-width: 500px;
+  }
+  section.quienSoy > .ancho .graficos .icon-react {
+    left: 0;
+  }
+}
+@media screen and (max-width: 957px) {
+  section.quienSoy > .ancho {
+    flex-wrap: wrap;
+  }
+  section.quienSoy > .ancho {
+    height: auto;
+    max-height: initial;
+    padding-top: 50px;
+  }
+  section.quienSoy > .ancho .graficos {
+    height: 500px;
+    width: 100%;
+    min-width: initial;
+  }
+  section.quienSoy > .ancho .graficos .icon-laravel {
+    right: 0;
+  }
+
+  section.ultimosTrabajos .ancho {
+    flex-wrap: wrap;
+    .columna1,
+    .columna2 {
+      width: 100%;
+    }
+  }
+  section.quienSoy .infoSobreMi .ancho {
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    .sobreMi,
+    .experiencia {
+      width: 100%;
+    }
+  }
+  section.quienSoy .infoSobreMi .ancho .sobreMi .content {
+    width: 100%;
+    padding-bottom: 50px;
+  }
+  section.quienSoy .infoSobreMi .ancho .experiencia .caja {
+    margin: 0 auto;
+  }
+  section.ultimosTrabajos .ancho .columna1 .cajaTitulo:last-child {
+    display: none;
+  }
+  header .ancho nav.menu-ppl ul {
+    display: none;
   }
 }
