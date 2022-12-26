@@ -1,7 +1,6 @@
-$(document).ready(function() {
-	$('.portafolio .ancho .proyectos').slick({
-	  infinite: true,
-	  slidesToShow: 2,
-	  slidesToScroll: 1
-	});
-})
+$(document).ready(function () {
+  $("#splash").css("opacity", "0");
+  window.setTimeout(function () {
+    $("#splash").css("display", "none");
+  }, 500);
+});

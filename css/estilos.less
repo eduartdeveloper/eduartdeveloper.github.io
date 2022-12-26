@@ -35,6 +35,27 @@ body {
   background-color: @secundario;
   position: relative;
 }
+#splash {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 10000000000000000000000000;
+  background-color: @tercero;
+  opacity: 1;
+  transition: all 0.5s;
+  &::before {
+    content: "</>";
+    display: block;
+    font-family: @fuente-secundaria;
+    color: @primario;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
 header {
   width: 100%;
   position: sticky;
@@ -405,7 +426,7 @@ section.quienSoy {
         p {
           font-size: 13px;
           color: @cuarto;
-          max-width: 350px;
+          max-width: 400px;
         }
       }
     }
@@ -883,13 +904,13 @@ footer {
   .icon-pack2 ul li:hover .fa {
     color: #fff;
   }
+  //   .icon-pack2 ul li:hover:nth-child(1) a {
+  //     background-color: #3b5999;
+  //   }
   .icon-pack2 ul li:hover:nth-child(1) a {
-    background-color: #3b5999;
-  }
-  .icon-pack2 ul li:hover:nth-child(2) a {
     background: #0a66c2;
   }
-  .icon-pack2 ul li:hover:nth-child(3) a {
+  .icon-pack2 ul li:hover:nth-child(4) a {
     background: -webkit-radial-gradient(
         circle farthest-corner at 35% 90%,
         #fec564,
@@ -976,42 +997,42 @@ footer {
         #fec66d 100%
       );
   }
-  .icon-pack2 ul li:hover:nth-child(4) a {
+  .icon-pack2 ul li:hover:nth-child(2) a {
     background-color: #ea4335;
   }
-  .icon-pack2 ul li:hover:nth-child(5) a {
+  .icon-pack2 ul li:hover:nth-child(3) a {
     background-color: #25d366;
   }
 
+  //   .icon-pack2 ul li:hover:nth-child(1) a:before {
+  //     background-color: #2e4a86;
+  //   }
   .icon-pack2 ul li:hover:nth-child(1) a:before {
-    background-color: #2e4a86;
-  }
-  .icon-pack2 ul li:hover:nth-child(2) a:before {
     background: #084a8c;
   }
-  .icon-pack2 ul li:hover:nth-child(3) a:before {
+  .icon-pack2 ul li:hover:nth-child(4) a:before {
     background-color: #d02d4c;
   }
-  .icon-pack2 ul li:hover:nth-child(4) a:before {
+  .icon-pack2 ul li:hover:nth-child(2) a:before {
     background-color: #75221b;
   }
-  .icon-pack2 ul li:hover:nth-child(5) a:before {
+  .icon-pack2 ul li:hover:nth-child(3) a:before {
     background-color: #126a32;
   }
 
+  //   .icon-pack2 ul li:hover:nth-child(1) a:after {
+  //     background-color: #4a69ad;
+  //   }
   .icon-pack2 ul li:hover:nth-child(1) a:after {
-    background-color: #4a69ad;
-  }
-  .icon-pack2 ul li:hover:nth-child(2) a:after {
     background: #095db1;
   }
-  .icon-pack2 ul li:hover:nth-child(3) a:after {
+  .icon-pack2 ul li:hover:nth-child(4) a:after {
     background-color: #f1395c;
   }
-  .icon-pack2 ul li:hover:nth-child(4) a:after {
+  .icon-pack2 ul li:hover:nth-child(2) a:after {
     background-color: #ce3b2e;
   }
-  .icon-pack2 ul li:hover:nth-child(5) a:after {
+  .icon-pack2 ul li:hover:nth-child(3) a:after {
     background-color: #20af55;
   }
 }
