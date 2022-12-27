@@ -491,6 +491,44 @@ section.ultimosTrabajos {
             object-position: 0% 100%;
           }
         }
+        @keyframes sitiophone {
+          0% {
+            object-position: 0% 0%;
+          }
+          13% {
+            object-position: 0% 0%;
+          }
+          16% {
+            object-position: -110px 0%;
+          }
+          29% {
+            object-position: -110px 0%;
+          }
+          32% {
+            object-position: -220px 0%;
+          }
+          45% {
+            object-position: -220px 0%;
+          }
+          48% {
+            object-position: -330px 0%;
+          }
+          61% {
+            object-position: -330px 0%;
+          }
+          64% {
+            object-position: -440px 0%;
+          }
+          77% {
+            object-position: -440px 0%;
+          }
+          80% {
+            object-position: -550px 0%;
+          }
+          100% {
+            object-position: -550px 0%;
+          }
+        }
         .dispositivo.mac .proyecto {
           .splash {
             // opacity: 1;
@@ -500,6 +538,12 @@ section.ultimosTrabajos {
           .sitio {
             transition: all 0.5s;
             animation: sitiomac 10s linear infinite;
+          }
+        }
+        .dispositivo.phone .proyecto {
+          img {
+            transition: all 0.5s;
+            animation: sitiophone 10s linear infinite;
           }
         }
       }
@@ -592,7 +636,6 @@ section.ultimosTrabajos {
           }
         }
         &.phone {
-          border: 1px solid red;
           img {
             height: 250px;
             width: auto;
@@ -604,6 +647,12 @@ section.ultimosTrabajos {
             height: 172px;
             top: 28px;
             left: 119px;
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              object-position: 0 0%;
+            }
           }
         }
       }
@@ -903,6 +952,9 @@ footer {
 
   .icon-pack2 ul li:hover .fa {
     color: #fff;
+  }
+  .icon-pack2 ul li:last-child:hover .fa {
+    color: #000;
   }
   //   .icon-pack2 ul li:hover:nth-child(1) a {
   //     background-color: #3b5999;
