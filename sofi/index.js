@@ -1,7 +1,7 @@
 const yesBtn = document.querySelector('#yesBtn');
 
 yesBtn.addEventListener('click',function () {
-    alert('Sabia que ibas a decir que si 💗')
+    alert('Sabia que ibas a decir que si 💗, paso a las 5:00PM por ti el viernes 14 de febrero')
 });
 
 const noBtn = document.querySelector('#noBtn');
