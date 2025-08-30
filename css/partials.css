@@ -1,0 +1,446 @@
+.site-page section.ultimosTrabajos {
+  background-color: #252629;
+  padding-top: 100px;
+}
+.site-page section.ultimosTrabajos .ancho {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-bottom: 100px;
+}
+.site-page section.ultimosTrabajos .ancho .caja {
+  position: relative;
+}
+.site-page section.ultimosTrabajos .ancho .caja .fondo {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(37, 38, 41, 0.7);
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+  top: 0;
+  left: 0;
+  z-index: -10;
+  opacity: 0;
+  -webkit-transition: z-index 0s, opacity 0.5s;
+  transition: z-index 0s, opacity 0.5s;
+  -webkit-transition-delay: 0.5s, 0s;
+          transition-delay: 0.5s, 0s;
+  -webkit-transition-property: z-index, opacity;
+  transition-property: z-index, opacity;
+}
+.site-page section.ultimosTrabajos .ancho .caja .content:hover {
+  z-index: 910000000000000;
+  -webkit-box-shadow: -20px 16px 20px 13px #191919;
+          box-shadow: -20px 16px 20px 13px #191919;
+  -webkit-transition: z-index 0s, -webkit-box-shadow 0.5s;
+  transition: z-index 0s, -webkit-box-shadow 0.5s;
+  transition: z-index 0s, box-shadow 0.5s;
+  transition: z-index 0s, box-shadow 0.5s, -webkit-box-shadow 0.5s;
+}
+@-webkit-keyframes splashmac {
+  0% {
+    opacity: 1;
+  }
+  5% {
+    opacity: 1;
+  }
+  10% {
+    opacity: 0;
+  }
+  95% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes splashmac {
+  0% {
+    opacity: 1;
+  }
+  5% {
+    opacity: 1;
+  }
+  10% {
+    opacity: 0;
+  }
+  95% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes sitiomac {
+  0% {
+    object-position: 0% 0%;
+  }
+  10% {
+    object-position: 0% 0%;
+  }
+  100% {
+    object-position: 0% 100%;
+  }
+}
+@keyframes sitiomac {
+  0% {
+    -o-object-position: 0% 0%;
+       object-position: 0% 0%;
+  }
+  10% {
+    -o-object-position: 0% 0%;
+       object-position: 0% 0%;
+  }
+  100% {
+    -o-object-position: 0% 100%;
+       object-position: 0% 100%;
+  }
+}
+@-webkit-keyframes sitiophone {
+  0% {
+    object-position: 0% 0%;
+  }
+  13% {
+    object-position: 0% 0%;
+  }
+  16% {
+    object-position: -110px 0%;
+  }
+  29% {
+    object-position: -110px 0%;
+  }
+  32% {
+    object-position: -220px 0%;
+  }
+  45% {
+    object-position: -220px 0%;
+  }
+  48% {
+    object-position: -330px 0%;
+  }
+  61% {
+    object-position: -330px 0%;
+  }
+  64% {
+    object-position: -440px 0%;
+  }
+  77% {
+    object-position: -440px 0%;
+  }
+  80% {
+    object-position: -550px 0%;
+  }
+  100% {
+    object-position: -550px 0%;
+  }
+}
+@keyframes sitiophone {
+  0% {
+    -o-object-position: 0% 0%;
+       object-position: 0% 0%;
+  }
+  13% {
+    -o-object-position: 0% 0%;
+       object-position: 0% 0%;
+  }
+  16% {
+    -o-object-position: -110px 0%;
+       object-position: -110px 0%;
+  }
+  29% {
+    -o-object-position: -110px 0%;
+       object-position: -110px 0%;
+  }
+  32% {
+    -o-object-position: -220px 0%;
+       object-position: -220px 0%;
+  }
+  45% {
+    -o-object-position: -220px 0%;
+       object-position: -220px 0%;
+  }
+  48% {
+    -o-object-position: -330px 0%;
+       object-position: -330px 0%;
+  }
+  61% {
+    -o-object-position: -330px 0%;
+       object-position: -330px 0%;
+  }
+  64% {
+    -o-object-position: -440px 0%;
+       object-position: -440px 0%;
+  }
+  77% {
+    -o-object-position: -440px 0%;
+       object-position: -440px 0%;
+  }
+  80% {
+    -o-object-position: -550px 0%;
+       object-position: -550px 0%;
+  }
+  100% {
+    -o-object-position: -550px 0%;
+       object-position: -550px 0%;
+  }
+}
+.site-page section.ultimosTrabajos .ancho .caja .content:hover .dispositivo.mac .proyecto .splash {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  -webkit-animation: splashmac 10s linear infinite;
+          animation: splashmac 10s linear infinite;
+}
+.site-page section.ultimosTrabajos .ancho .caja .content:hover .dispositivo.mac .proyecto .sitio {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  -webkit-animation: sitiomac 10s linear infinite;
+          animation: sitiomac 10s linear infinite;
+}
+.site-page section.ultimosTrabajos .ancho .caja .content:hover .dispositivo.phone .proyecto img {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  -webkit-animation: sitiophone 10s linear infinite;
+          animation: sitiophone 10s linear infinite;
+}
+.site-page section.ultimosTrabajos .ancho .caja .content:hover ~ .fondo {
+  opacity: 1;
+  z-index: 100000000;
+  -webkit-transition: z-index 0s, opacity 0.5s;
+  transition: z-index 0s, opacity 0.5s;
+}
+.site-page section.ultimosTrabajos .ancho .caja .content {
+  width: 400px;
+  height: 400px;
+  border-radius: 10px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  padding: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-shadow: -12px 17px 20px 0px #191919;
+          box-shadow: -12px 17px 20px 0px #191919;
+  position: relative;
+  z-index: 20;
+  -webkit-transition: z-index 0s, -webkit-box-shadow 0.5s;
+  transition: z-index 0s, -webkit-box-shadow 0.5s;
+  transition: z-index 0s, box-shadow 0.5s;
+  transition: z-index 0s, box-shadow 0.5s, -webkit-box-shadow 0.5s;
+  -webkit-transition-delay: 0s, 1s;
+          transition-delay: 0s, 1s;
+  -webkit-transition-property: z-index, -webkit-box-shadow;
+  transition-property: z-index, -webkit-box-shadow;
+  transition-property: box-shadow, z-index;
+  transition-property: box-shadow, z-index, -webkit-box-shadow;
+  text-align: center;
+}
+.site-page section.ultimosTrabajos .ancho .caja .content .cabezote {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.site-page section.ultimosTrabajos .ancho .caja .content .cabezote > p {
+  color: white;
+  font-size: 20px;
+  font-weight: 300;
+}
+.site-page section.ultimosTrabajos .ancho .caja .content .cabezote .habilidades {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.site-page section.ultimosTrabajos .ancho .caja .content .cabezote .habilidades p {
+  background-color: #4c4d51;
+  color: #81838a;
+  font-size: 11px;
+  padding: 1px 5px;
+  border-radius: 5px;
+  margin: 0 2px;
+}
+.site-page section.ultimosTrabajos .ancho .caja .content .dispositivo {
+  width: 100%;
+  position: relative;
+}
+.site-page section.ultimosTrabajos .ancho .caja .content .dispositivo.mac img {
+  height: 250px;
+  width: auto;
+  position: relative;
+}
+.site-page section.ultimosTrabajos .ancho .caja .content .dispositivo.mac .proyecto {
+  position: absolute;
+  background-color: #64f4ab;
+  width: 237px;
+  height: 136px;
+  top: 15px;
+  left: 55px;
+}
+.site-page section.ultimosTrabajos .ancho .caja .content .dispositivo.mac .proyecto .splash {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 10;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.site-page section.ultimosTrabajos .ancho .caja .content .dispositivo.mac .proyecto .sitio {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 0% 0%;
+     object-position: 0% 0%;
+}
+.site-page section.ultimosTrabajos .ancho .caja .content .dispositivo.phone img {
+  height: 250px;
+  width: auto;
+}
+.site-page section.ultimosTrabajos .ancho .caja .content .dispositivo.phone .proyecto {
+  position: absolute;
+  background-color: #64f4ab;
+  width: 110px;
+  height: 172px;
+  top: 28px;
+  left: 119px;
+}
+.site-page section.ultimosTrabajos .ancho .caja .content .dispositivo.phone .proyecto img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 0 0%;
+     object-position: 0 0%;
+}
+.site-page section.ultimosTrabajos .ancho .caja .content .extract {
+  color: #81838a;
+  font-size: 13px;
+}
+.site-page section.ultimosTrabajos .ancho .caja .content .verMas {
+  text-decoration: none;
+  color: #64f4ab;
+  font-weight: 200;
+  font-size: 13px;
+  padding: 0 20px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  position: relative;
+  display: inline-block;
+  width: 120px;
+}
+.site-page section.ultimosTrabajos .ancho .caja .content .verMas::before {
+  content: "<";
+  display: block;
+  position: absolute;
+  color: #64f4ab;
+  left: 12px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  opacity: 0;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.site-page section.ultimosTrabajos .ancho .caja .content .verMas::after {
+  content: ">";
+  display: block;
+  position: absolute;
+  color: #64f4ab;
+  right: 12px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  opacity: 0;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.site-page section.ultimosTrabajos .ancho .caja .content .verMas:hover {
+  color: #64f4ab;
+}
+.site-page section.ultimosTrabajos .ancho .caja .content .verMas:hover::before {
+  opacity: 1;
+  left: 5px;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+  -webkit-transition: left 0.5s;
+  transition: left 0.5s;
+}
+.site-page section.ultimosTrabajos .ancho .caja .content .verMas:hover::after {
+  opacity: 1;
+  right: 5px;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+  -webkit-transition: right 0.5s;
+  transition: right 0.5s;
+}
+.site-page section.ultimosTrabajos .ancho .columna1 {
+  width: 50%;
+  text-align: center;
+  position: relative;
+}
+.site-page section.ultimosTrabajos .ancho .columna1 .cajaTitulo {
+  margin-bottom: 50px;
+  text-align: center;
+}
+.site-page section.ultimosTrabajos .ancho .columna1 .cajaTitulo h2 {
+  color: white;
+  font-weight: 400;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.site-page section.ultimosTrabajos .ancho .columna1 .cajaTitulo p {
+  color: #81838a;
+  font-size: 13px;
+  max-width: 300px;
+  display: block;
+  margin: 0 auto;
+}
+.site-page section.ultimosTrabajos .ancho .columna1 .caja:nth-child(1n) .content {
+  background: #1a1d2f;
+}
+.site-page section.ultimosTrabajos .ancho .columna1 .caja:nth-child(2n) .content {
+  background: linear-gradient(138deg, #161a1f, #2b2b2d);
+}
+.site-page section.ultimosTrabajos .ancho .columna1 .caja:nth-child(3n) .content {
+  background: #2e3038;
+}
+.site-page section.ultimosTrabajos .ancho .columna2 {
+  width: 50%;
+  text-align: center;
+}
+.site-page section.ultimosTrabajos .ancho .columna2 .caja:nth-child(1n) .content {
+  background: #2e3038;
+}
+.site-page section.ultimosTrabajos .ancho .columna2 .caja:nth-child(2n) .content {
+  background: #1a1d2f;
+}
+.site-page section.ultimosTrabajos .ancho .columna2 .caja:nth-child(3n) .content {
+  background: linear-gradient(138deg, #161a1f, #2b2b2d);
+}

@@ -1,0 +1,399 @@
+@primario: #64f4ab;
+@secundario: #2d2e31;
+@tercero: #252629;
+@cuarto: #81838a;
+@quinto: #2b2c2f;
+@sexto: #4c4d51;
+@septimo: #2e3038;
+@fuente-primaria: 'Segoe UI';
+@fuente-secundaria: 'Segoe UI';
+
+
+
+
+
+.site-page section.ultimosTrabajos {
+    background-color: @tercero;
+    padding-top: 100px;
+
+    .ancho {
+        max-width: 1000px;
+        margin: 0 auto;
+        display: flex;
+        padding-bottom: 100px;
+
+        .caja {
+            position: relative;
+
+            .fondo {
+                // display: none;
+                position: fixed;
+                width: 100vw;
+                height: 100vh;
+                background-color: fade(@tercero, 70);
+                backdrop-filter: blur(2px);
+                top: 0;
+                left: 0;
+                z-index: -10;
+                opacity: 0;
+                transition: z-index 0s, opacity 0.5s;
+                transition-delay: 0.5s, 0s;
+                transition-property: z-index, opacity;
+            }
+
+            .content:hover {
+                z-index: 910000000000000;
+                box-shadow: -20px 16px 20px 13px #191919;
+                transition: z-index 0s, box-shadow 0.5s;
+
+                @keyframes splashmac {
+                    0% {
+                        opacity: 1;
+                    }
+
+                    5% {
+                        opacity: 1;
+                    }
+
+                    10% {
+                        opacity: 0;
+                    }
+
+                    95% {
+                        opacity: 0;
+                    }
+
+                    100% {
+                        opacity: 1;
+                    }
+                }
+
+                @keyframes sitiomac {
+                    0% {
+                        object-position: 0% 0%;
+                    }
+
+                    10% {
+                        object-position: 0% 0%;
+                    }
+
+                    100% {
+                        object-position: 0% 100%;
+                    }
+                }
+
+                @keyframes sitiophone {
+                    0% {
+                        object-position: 0% 0%;
+                    }
+
+                    13% {
+                        object-position: 0% 0%;
+                    }
+
+                    16% {
+                        object-position: -110px 0%;
+                    }
+
+                    29% {
+                        object-position: -110px 0%;
+                    }
+
+                    32% {
+                        object-position: -220px 0%;
+                    }
+
+                    45% {
+                        object-position: -220px 0%;
+                    }
+
+                    48% {
+                        object-position: -330px 0%;
+                    }
+
+                    61% {
+                        object-position: -330px 0%;
+                    }
+
+                    64% {
+                        object-position: -440px 0%;
+                    }
+
+                    77% {
+                        object-position: -440px 0%;
+                    }
+
+                    80% {
+                        object-position: -550px 0%;
+                    }
+
+                    100% {
+                        object-position: -550px 0%;
+                    }
+                }
+
+                .dispositivo.mac .proyecto {
+                    .splash {
+                        // opacity: 1;
+                        transition: all 0.5s;
+                        animation: splashmac 10s linear infinite;
+                    }
+
+                    .sitio {
+                        transition: all 0.5s;
+                        animation: sitiomac 10s linear infinite;
+                    }
+                }
+
+                .dispositivo.phone .proyecto {
+                    img {
+                        transition: all 0.5s;
+                        animation: sitiophone 10s linear infinite;
+                    }
+                }
+            }
+
+            .content:hover~.fondo {
+                // display: block;
+                opacity: 1;
+                z-index: 100000000;
+                transition: z-index 0s, opacity 0.5s;
+            }
+        }
+
+        .caja .content {
+            width: 400px;
+            height: 400px;
+            border-radius: 10px;
+            margin: 0 auto;
+            margin-bottom: 50px;
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            box-shadow: -12px 17px 20px 0px #191919;
+            position: relative;
+            z-index: 20;
+            transition: z-index 0s, box-shadow 0.5s;
+            transition-delay: 0s, 1s;
+            transition-property: box-shadow, z-index;
+            text-align: center;
+
+            .cabezote {
+                display: flex;
+                width: 100%;
+                justify-content: space-between;
+                align-items: center;
+
+                >p {
+                    color: white;
+                    font-size: 20px;
+                    font-weight: 300;
+                }
+
+                .habilidades {
+                    display: flex;
+
+                    p {
+                        background-color: @sexto;
+                        color: @cuarto;
+                        font-size: 11px;
+                        padding: 1px 5px;
+                        border-radius: 5px;
+                        margin: 0 2px;
+                    }
+                }
+            }
+
+            .dispositivo {
+                width: 100%;
+                // border: 1px solid red;
+                position: relative;
+
+                &.mac {
+
+                    //   border: 1px solid red;
+                    img {
+                        height: 250px;
+                        width: auto;
+                        position: relative;
+                    }
+
+                    .proyecto {
+                        position: absolute;
+                        background-color: @primario;
+                        width: 237px;
+                        height: 136px;
+                        top: 15px;
+                        left: 55px;
+
+                        // overflow: hidden;
+                        .splash {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            opacity: 0;
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            bottom: 0;
+                            right: 0;
+                            z-index: 10;
+                            transition: all 0.5s;
+                        }
+
+                        .sitio {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            object-position: 0% 0%;
+                        }
+                    }
+                }
+
+                &.phone {
+                    img {
+                        height: 250px;
+                        width: auto;
+                    }
+
+                    .proyecto {
+                        position: absolute;
+                        background-color: @primario;
+                        width: 110px;
+                        height: 172px;
+                        top: 28px;
+                        left: 119px;
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            object-position: 0 0%;
+                        }
+                    }
+                }
+            }
+
+            .extract {
+                color: @cuarto;
+                font-size: 13px;
+            }
+
+            .verMas {
+                text-decoration: none;
+                color: @primario;
+                font-weight: 200;
+                font-size: 13px;
+                padding: 0 20px;
+                transition: all 0.5s;
+                position: relative;
+                display: inline-block;
+                width: 120px;
+
+                &::before {
+                    content: "<";
+                    display: block;
+                    position: absolute;
+                    color: @primario;
+                    left: 12px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    opacity: 0;
+                    transition: all 0.5s;
+                }
+
+                &::after {
+                    content: ">";
+                    display: block;
+                    position: absolute;
+                    color: @primario;
+                    right: 12px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    opacity: 0;
+                    transition: all 0.5s;
+                }
+
+                &:hover {
+                    color: @primario;
+
+                    &::before {
+                        opacity: 1;
+                        left: 5px;
+                        transition: opacity 0.3s;
+                        transition: left 0.5s;
+                    }
+
+                    &::after {
+                        opacity: 1;
+                        right: 5px;
+                        transition: opacity 0.3s;
+                        transition: right 0.5s;
+                    }
+                }
+            }
+        }
+
+        .columna1 {
+            width: 50%;
+            text-align: center;
+            position: relative;
+
+            .cajaTitulo {
+                margin-bottom: 50px;
+                text-align: center;
+
+                h2 {
+                    color: white;
+                    font-weight: 400;
+                    font-size: 20px;
+                    margin-bottom: 10px;
+                }
+
+                p {
+                    color: @cuarto;
+                    font-size: 13px;
+                    max-width: 300px;
+                    display: block;
+                    margin: 0 auto;
+                }
+            }
+
+            .caja {
+                &:nth-child(1n) .content {
+                    background: #1a1d2f;
+                }
+
+                &:nth-child(2n) .content {
+                    background: linear-gradient(138deg, #161a1f, #2b2b2d);
+                }
+
+                &:nth-child(3n) .content {
+                    background: @septimo;
+                }
+            }
+        }
+
+        .columna2 {
+            width: 50%;
+            text-align: center;
+
+            .caja {
+                &:nth-child(1n) .content {
+                    background: @septimo;
+                }
+
+                &:nth-child(2n) .content {
+                    background: #1a1d2f;
+                }
+
+                &:nth-child(3n) .content {
+                    background: linear-gradient(138deg, #161a1f, #2b2b2d);
+                }
+            }
+        }
+    }
+}
